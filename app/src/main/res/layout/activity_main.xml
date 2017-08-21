@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.motiontech.photos.MainActivity">
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/mainSpinner"
+        android:layout_marginBottom="10dp"
+        style="@style/SpinKitView.DoubleBounce"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/colorPrimary" />
+
+    <ImageButton
+        android:src="@drawable/ic_action_retry"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/mainSpinner"
+        android:id="@+id/retryBtn"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_below="@+id/retryBtn"
+        android:layout_above="@+id/bottomSpinner"
+        android:divider="@android:color/transparent"
+        tools:listitem="@layout/image_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/bottomSpinner"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        style="@style/SpinKitView.DoubleBounce"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/colorPrimary" />
+</RelativeLayout>
