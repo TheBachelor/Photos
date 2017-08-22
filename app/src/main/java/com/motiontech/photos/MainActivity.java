@@ -236,7 +236,6 @@ public class MainActivity extends AppCompatActivity {
             final SpannableString s = new SpannableString("Photos is a gallery app plugging into 500px." +
                     "\n" +
                     "Built by Manenga Mungandi " +
-                    "for his coding assessment for Superbalist." +
                     "\n" +
                     "\n" +
                     "For more info " + "www.manengamungandi.com");
